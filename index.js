@@ -59,7 +59,7 @@ class Employer {
     return [... new Set(meals)]
   }
   mealTotals() { let object = {}
-    this.employees().forEach(customer => object[customer.id] = customer.meals().length)
+    this.meals().forEach(meal => object[meal.id] = meal.customers().length)
     return object
   }
 }
