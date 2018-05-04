@@ -1,4 +1,4 @@
-let store = {deliveries: [], meals: []}
+let store = {deliveries: [], meals: [], employers: []}
 
 let deliveryId = 0
 class Delivery {
@@ -26,6 +26,15 @@ class Meal {
     return store.meals.sort(function(a, b) {
       return b.price - a.price
     })
+  }
+}
+
+let employerId = 0
+class Employer {
+  constructor(name) {
+    this.id = ++employerId
+    this.name = title
+    store.employers.push(this)
   }
 }
 
