@@ -22,7 +22,7 @@ class Meal {
     store.meals.push(this)
   }
 
-  byPrice() {
+  static byPrice() {
     return store.meals.sort((a, b) => a.price - a.price)
   }
 }
