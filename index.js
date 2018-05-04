@@ -21,6 +21,8 @@ class Meal {
     this.price = price
     store.meals.push(this)
   }
+
+  byPrice() {}
 }
 
 let customerId = 0
