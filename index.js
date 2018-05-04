@@ -38,6 +38,10 @@ class Employer {
     this.name = name
     store.employers.push(this)
   }
+
+  employees() {
+    
+  }
 }
 
 let customerId = 0
