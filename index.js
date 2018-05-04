@@ -47,7 +47,7 @@ class Customer {
     store.customers.push(this)
   }
 
-  meals() { return store.meals.filter(meal => meal.customerId === this.id) }
+  meals() { return this.deliveries().map(delivery => delivery.meal()) }
   deliveries() { return store.deliveries.filter(delivery => delivery.customerId === this.id) }
   totalSpent() {
 
