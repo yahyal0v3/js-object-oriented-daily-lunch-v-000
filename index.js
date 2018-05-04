@@ -6,12 +6,10 @@ class Delivery {
     this.id = ++deliveryId
     if (meal) {this.mealId = meal.id}
     if (customer) {this.customerId = customer.id}
-
     store.deliveries.push(this)
   }
 
   meal () {}
-
   customer() {}
 }
 
@@ -21,7 +19,6 @@ class Meal {
     this.id = ++mealId
     this.name = name
     this.price = price
-
     store.meals.push(this)
   }
 }
@@ -35,8 +32,6 @@ class Customer {
   }
 
   meals() {}
-
   deliveries() {}
-
   totalSpent() {}
 }
