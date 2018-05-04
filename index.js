@@ -31,17 +31,6 @@ class Meal {
   }
 }
 
-let employerId = 0
-class Employer {
-  constructor(name) {
-    this.id = ++employerId
-    this.name = name
-    store.employers.push(this)
-  }
-
-  employees() { return store.customers.filter(customer => customer.employerId === this.id) }
-}
-
 let customerId = 0
 class Customer {
   constructor(name, employerId) {
@@ -55,3 +44,16 @@ class Customer {
   meals() { return this.deliveries().map(delivery => delivery.meal()) }
   totalSpent() { return this.meals().reduce((a, b) => a.price + b.price) }
 }
+
+let employerId = 0
+class Employer {
+  constructor(name) {
+    this.id = ++employerId
+    this.name = name
+    store.employers.push(this)
+  }
+
+  employees() { return store.customers.filter(customer => customer.employerId === this.id) }
+  deliveries() {}
+}
+
