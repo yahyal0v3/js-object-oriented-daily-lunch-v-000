@@ -54,5 +54,5 @@ class Employer {
   }
 
   employees() { return store.customers.filter(customer => customer.employerId === this.id) }
-  deliveries() { return this.employees().map(employee => employee.deliveries) }
+  deliveries() { return this.employees().map(employee => employee.deliveries()) }
 }
