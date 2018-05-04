@@ -33,7 +33,7 @@ let employerId = 0
 class Employer {
   constructor(name) {
     this.id = ++employerId
-    this.name = title
+    this.name = name
     store.employers.push(this)
   }
 }
