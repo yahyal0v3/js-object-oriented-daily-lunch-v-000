@@ -55,7 +55,6 @@ class Employer {
 
   employees() { return store.customers.filter(customer => customer.employerId === this.id) }
   deliveries() { return store.deliveries.filter(delivery => delivery.customer().employerId === this.id) }
-  meals() { let meals = this.deliveries().map(delivery => delivery.meal())
-    return meals.unique()
+  meals() { return this.deliveries().filter((delivery, index) => this.deliveries().indexOf(delivery.meal()) == index)
   }
 }
