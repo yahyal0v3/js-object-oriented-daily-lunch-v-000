@@ -4,8 +4,8 @@ let deliveryId = 0
 class Delivery {
   constructor(meal, customer) {
     this.id = ++deliveryId
-    this.mealId = meal.id
-    this.customerId = customer.id
+    if (meal) {this.mealId = meal.id}
+    if (customer) {this.customerId = customer.id}
 
     store.deliveries.push(this)
   }
