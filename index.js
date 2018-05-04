@@ -58,4 +58,8 @@ class Employer {
   meals() { let meals = this.deliveries().map((delivery) => delivery.meal())
     return [... new Set(meals)]
   }
+  mealTotals() { let object = {}
+    this.customers().forEach(customer => object[customer.id] = customer.meals().length)
+    return object
+  }
 }
