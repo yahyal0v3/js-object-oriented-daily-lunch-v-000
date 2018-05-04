@@ -27,9 +27,6 @@ class Meal {
       return b.price - a.price
     })
   }
-
-  
-
 }
 
 let customerId = 0
