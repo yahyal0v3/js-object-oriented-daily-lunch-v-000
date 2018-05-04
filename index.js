@@ -10,7 +10,7 @@ class Delivery {
   }
 
   meal () {}
-  customer() { return store.customers.filter(customer => customer.id === this.customerId) }
+  customer() { return store.customers.find(customer => customer.id === this.customerId) }
 }
 
 let mealId = 0
