@@ -22,7 +22,9 @@ class Meal {
     store.meals.push(this)
   }
 
-  byPrice() {}
+  byPrice() {
+    return store.meals.sort()
+  }
 }
 
 let customerId = 0
