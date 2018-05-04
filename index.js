@@ -10,7 +10,7 @@ class Delivery {
   }
 
   meal () {}
-  customer() {}
+  customer() { return store.customers.filter(customer => customer.id === this.customerId) }
 }
 
 let mealId = 0
@@ -52,6 +52,6 @@ class Customer {
     return store.deliveries.filter(delivery => delivery.customerId === this.id)
   }
   totalSpent() {
-    
+
   }
 }
