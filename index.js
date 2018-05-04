@@ -51,7 +51,5 @@ class Customer {
 
   deliveries() { return store.deliveries.filter(delivery => delivery.customerId === this.id) }
   meals() { return this.deliveries().map(delivery => delivery.meal()) }
-  totalSpent() {
-
-  }
+  totalSpent() { return this.meals().reduce() }
 }
