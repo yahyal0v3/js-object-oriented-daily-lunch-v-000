@@ -38,10 +38,12 @@ class Employer {
     this.name = name
     store.employers.push(this)
   }
-
-
-  employees() {return store.customers.filter(customer => customer.employerId === this.id)}
-
+  
+  employees() {
+   return store.customers.filter(customer => {
+     return customer.employerId === this.id
+   })
+ }
 }
 
 let customerId = 0
