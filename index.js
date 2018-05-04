@@ -22,6 +22,8 @@ class Meal {
     store.meals.push(this)
   }
 
+  deliveries() { return store.deliveries.filter(delivery => delivery.mealId === this.id) }
+  customers() { return this.deliveries().map(delivery => delivery.customer()) }
   static byPrice(){
     return store.meals.sort(function(a, b) {
       return b.price - a.price
@@ -47,8 +49,8 @@ class Customer {
     store.customers.push(this)
   }
 
-  meals() { return this.deliveries().map(delivery => delivery.meal()) }
   deliveries() { return store.deliveries.filter(delivery => delivery.customerId === this.id) }
+  meals() { return this.deliveries().map(delivery => delivery.meal()) }
   totalSpent() {
 
   }
