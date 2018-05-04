@@ -1,4 +1,4 @@
-let store = {deliveries: []}
+let store = {deliveries: [], meals: []}
 
 let deliveryId = 0
 class Delivery {
@@ -13,6 +13,17 @@ class Delivery {
   meal () {}
 
   customer() {}
+}
+
+let mealId = 0
+class Meal {
+  constructor(name, price) {
+    this.id = ++mealId
+    this.name = name
+    this.price = price
+
+    store.meals.push(this)
+  }
 }
 
 let customerId = 0
