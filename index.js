@@ -55,6 +55,6 @@ class Employer {
 
   employees() { return store.customers.filter(customer => customer.employerId === this.id) }
   deliveries() { return store.deliveries.filter(delivery => delivery.customer().employerId === this.id) }
-  meals() { return this.deliveries().filter((delivery, index) => this.deliveries().indexOf(delivery.meal()) == index)
+  meals() { return this.deliveries().filter((delivery, index) => this.deliveries().indexOf(delivery) == index)
   }
 }
