@@ -55,12 +55,6 @@ class Employer {
 
   employees() { return store.customers.filter(customer => customer.employerId === this.id) }
   deliveries() { return store.deliveries.filter(delivery => delivery.customer().employerId === this.id) }
-  meals() { return this.deliveries().eachOf(function(delivery, index, self) {
-    let array = []
-    if (self.indexOf(delivery) === index) {
-      array.push(delivery.meal)
-    }
-    return array
-  } 
+  meals() { return this.deliveries().filter((delivery) => delivery.meal())
   }
 }
