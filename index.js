@@ -56,6 +56,6 @@ class Employer {
   employees() { return store.customers.filter(customer => customer.employerId === this.id) }
   deliveries() { return store.deliveries.filter(delivery => delivery.customer().employerId === this.id) }
   meals() { let meals = return this.deliveries().map(delivery => delivery.meal())
-    meals.unique()
+    return meals.unique()
   }
 }
