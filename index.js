@@ -33,10 +33,10 @@ class Meal {
 
 let customerId = 0
 class Customer {
-  constructor(name, employerId) {
+  constructor(name, employer) {
     this.id = ++customerId
     this.name = name
-    
+    if (employer) { this.employerId = employer.id }
     store.customers.push(this)
   }
 
