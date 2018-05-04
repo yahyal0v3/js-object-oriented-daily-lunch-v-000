@@ -21,12 +21,13 @@ class Meal {
     this.price = price
     store.meals.push(this)
   }
-
+ 
  static byPrice(){
-   return store.meals.sort(function(a, b) {
-     return a.price - a.price
+   return store.meals.sort(function (meal1, meal2) {
+     return meal2.price - meal1.price
    })
  }
+ 
 }
 
 let customerId = 0
